@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-<!--     <title>Blake's Portfolio</title> -->
+    <title>Blake's Portfolio</title>
     <!-- font awesome cdn -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" type="text/css" />
     <link href="style.css" rel="stylesheet" type="text/css" />
@@ -23,7 +23,23 @@
       <a href="order">order</a>
       <a href="blogs">blogs</a>
     </nav>
+
    </section>
+<!-- script -->
+<script>
+  let menu = document.querySelector('#menu-bar');
+  let navbar = document.querySelector('.navbar');
+
+  menu.addEventListener('click', () => {
+    menu.classList.toggle('fa-times');
+    menu.classList.toggle('nav-toggle');
+  });
+
+  window.onScroll = () =>{
+    menu.classList.remove('fa-times');
+    menu.classList.remove('nav-toggle');
+  }
+</script>
 
   </body>
 
