@@ -50,7 +50,7 @@ section {
   padding: 9rem 10%;
 }
 
-.header {
+header {
   padding-top: 2rem;
   padding-bottom: 2rem;
   display: flex;
@@ -64,23 +64,35 @@ section {
   z-index: 1000;
 }
 
-.header .logo {
+header .logo {
   font-size: 2.5rem;
   font-weight: bolder;
 }
 
-.header .logo i {
+header .logo i {
   color: var(--peru);
   padding-right: 1rem;
 }
 
-.header .navbar a {
+header .navbar {
+  position: absolute;
+  top:100%; left: 0; right: 0;
+  background: var(--black);
+  border-top: 1rem 2rem;
+  clip-path: polygon(0 0,100% 0,100% 0, 0 0);
+}
+
+header .navbar .nav-toggle {
+  clip-path: polygon(0 0,100% 0,100% 0, 0 0);
+}
+
+header .navbar a {
   font-size: 2rem;
   margin-left: 2rem;
   color: var(--light-black);
 }
 
-.header .navbar a:hover {
+header .navbar a:hover {
   color: var(--black);
 }
 
